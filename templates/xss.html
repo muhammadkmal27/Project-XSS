@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XSS</title>
+  </head>
+  <body>
+    <h1>Enter URL</h1>
+    <form action="/xss" method="post">
+      <input type="text" name="url" required /><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

