@@ -97,15 +97,9 @@ try:
         clear_screen()
 
         panel = Panel(
-            """
-           __     _   ___         _      
-     _  __/ /____/ | / (_)___    (_)___ _
-    | |/_/ / ___/  |/ / / __ \  / / __ `/
-    _>  </ (__  ) /|  / / / / / / / /_/ / 
-   /_/|_/_/____/_/ |_/_/_/ /_/_/ /\__,_/  
-                            /___/         
+            """        
    
-  Credit - AnonKryptiQuz x Coffinxp x Hexsh1dow x Naho
+  Credit - Akmal x Deyrrel x Afif
             """,
             style="bold green",
             border_style="blue",
