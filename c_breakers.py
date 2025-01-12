@@ -84,7 +84,7 @@ try:
             print(border_color + "│" + option_color + option.ljust(59) + border_color + "│")
         
         print(border_color + "└" + "─" * 61 + "┘")
-        authors = "Created by: Akmal, Deyrrel, Afif"
+        authors = "Created by: Akmal, Deyrrel, Syed"
         instructions = "Select an option by entering the corresponding number:"
         
         print(Fore.WHITE + Style.BRIGHT + "─" * 63)
@@ -99,7 +99,7 @@ try:
         panel = Panel(
             """        
    
-  Credit - Akmal x Deyrrel x Afif
+  Credit - Akmal x Deyrrel x Syed
             """,
             style="bold green",
             border_style="blue",
