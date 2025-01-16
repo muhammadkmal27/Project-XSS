@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web IDS Monitor</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- font google poppins -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    .
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style css -->
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style1.css') }}"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      .container {
+        min-height: 100%;
+        /* Tambahkan padding bawah jika diperlukan */
+        padding-bottom: 100px; /* Sesuaikan dengan tinggi footer */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- navbar start -->
+      <nav class="navbar">
+        <a href="#" class="navbar-logo">My <span>IDS</span></a>
+        <div class="navbar-nav">
+          <a href="#">home</a>
+          <a href="#">Vulnerability</a>
+          <a href="contact_us.html">About Us</a>
+          <a onclick="logout()">Logout</a>
+        </div>
+        <div class="navbar-nav2">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="ids_ips.html">IDS/IPS</a>
+          <a href="traffic_analysis.html">Traffic Analysis</a>
+          <a href="ddos_tool.html">DDOS</a>
+        </div>
+
+        <div class="navbar-extra">
+          <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+      </nav>
+
+      <!-- navbar end -->
+
+      <section class="hero" id="home">
+        <main class="content">
+          <h1>Scan our <span>Traffic</span></h1>
+          <p>
+            Deep Learning-Based Intrusion Detection System for Mitigating DDoS
+            Attacks combines cybersecurity techniques with machine learning.
+          </p>
+          <form action="/scan" method="post">
+            <button type="submit" class="cta">Scan Now</button>
+          </form>
+        </main>
+        <main class="content2">
+          <h1>Scan our <span>Traffic</span></h1>
+          <p>
+            Deep Learning-Based Intrusion Detection System for Mitigating DDoS
+            Attacks combines cybersecurity techniques with machine learning.
+          </p>
+          <a href="ids_ips.html" class="cta">Scan Now</a>
+        </main>
+        <main class="content2">
+          <h1>Scan our <span>Traffic</span></h1>
+          <p>
+            Deep Learning-Based Intrusion Detection System for Mitigating DDoS
+            Attacks combines cybersecurity techniques with machine learning.
+          </p>
+          <a href="ids_ips.html" class="cta">Scan Now</a>
+        </main>
+        <main class="content2">
+          <h1>Scan our <span>Traffic</span></h1>
+          <p>
+            Deep Learning-Based Intrusion Detection System for Mitigating DDoS
+            Attacks combines cybersecurity techniques with machine learning.
+          </p>
+          <a href="ids_ips.html" class="cta">Scan Now</a>
+        </main>
+        <div id="image-switcher-button">
+          <i data-feather="chevrons-right"></i>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2024 - ADA Malaysia Sdn.Bhd</p>
+    </footer>
+
+    <script>
+      const images = document.querySelectorAll("#home main");
+      const button = document.getElementById("image-switcher-button");
+      let currentImageIndex = 0;
+
+      button.addEventListener("click", () => {
+        // Sembunyikan gambar saat ini
+        images[currentImageIndex].classList.remove("content");
+        images[currentImageIndex].classList.add("content2");
+
+        // Pindah ke gambar berikutnya
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+
+        // Tampilkan gambar baru dengan efek fade-in
+        images[currentImageIndex].classList.remove("content2");
+        images[currentImageIndex].classList.add("content");
+      });
+
+      feather.replace();
+
+      $("#dataForm").on("submit", function (e) {
+        e.preventDefault();
+        const inputData = {}; // Ambil data dari input
+
+        $.ajax({
+          url: "http://10.129.95.226:5000/predict",
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(inputData),
+          success: function (response) {
+            $("#result").html("Prediction: " + response.join(", "));
+          },
+        });
+      });
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

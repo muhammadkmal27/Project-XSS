@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Payload</title>
+    <title>Output</title>
   </head>
   <body>
-    <h1>Upload File</h1>
-    <form action="/payload" method="post" enctype="multipart/form-data">
-      <input type="file" name="file" required /><br />
-      <button type="submit">Upload</button>
-    </form>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>XSS</title>
+        <style>
+          body {
+            background-color: black;
+            color: orange;
+            font-family: monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+          }
+          .container {
+            border: 2px solid orange;
+            margin: 50px auto;
+            padding: 20px;
+            width: 50%;
+            text-align: left;
+          }
+          .title {
+            font-size: 2em;
+            text-align: center;
+            text-shadow: 2px 2px black;
+          }
+          .menu {
+            margin: 20px 0;
+          }
+          .menu-item {
+            margin: 5px 0;
+          }
+          .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+          }
+          .input-prompt {
+            color: lightblue;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="title">XSS</div>
+          <div class="menu">
+            <div class="menu-item">Welcome to the XSS Testing Tool!</div>
+          </div>
+        </div>
+        <label for="username">Enter the path to the payload file:</label><br />
+        <input type="number" id="number" /><br />
+      </body>
+    </html>
+
+    <h1></h1>
+    <pre>{{ output }}</pre>
   </body>
 </html>

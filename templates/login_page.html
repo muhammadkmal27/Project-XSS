@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register & Login</title>
+    <!-- Kemaskini path CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="form-container">
+        <div id="login-form" class="form">
+          <h2>Login</h2>
+          <input type="text" id="login-username" placeholder="Username" />
+          <input type="password" id="login-password" placeholder="Password" />
+          <h3>Choose a security image</h3>
+          <div class="image-grid">
+            <!-- Kemaskini path gambar -->
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image1.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image1.png') }}', 'login-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image2.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image2.png') }}', 'login-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image3.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image3.png') }}', 'login-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image4.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image4.png') }}', 'login-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image5.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image5.png') }}', 'login-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image6.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image6.png') }}', 'login-form')"
+            />
+          </div>
+          <button onclick="confirmSelection('login-form')">Confirm</button>
+          <p>
+            Don't have an account yet?
+            <a href="#" onclick="toggleForm()">Register here</a>
+          </p>
+        </div>
+        <div id="register-form" class="form" style="display: none">
+          <h2>Register</h2>
+          <input type="text" id="reg-username" placeholder="Username" />
+          <input type="password" id="reg-password" placeholder="Password" />
+          <h3>Choose a security image</h3>
+          <div class="image-grid">
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image1.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image1.png') }}', 'register-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image2.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image2.png') }}', 'register-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image3.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image3.png') }}', 'register-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image4.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image4.png') }}', 'register-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image5.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image5.png') }}', 'register-form')"
+            />
+            <img
+              class="imejj"
+              src="{{ url_for('static', filename='img/image6.png') }}"
+              onclick="selectSecurityImage('{{ url_for('static', filename='img/image6.png') }}', 'register-form')"
+            />
+          </div>
+          <button onclick="confirmSelection('register-form')">Register</button>
+          <p>
+            Already have an account?
+            <a href="#" onclick="toggleForm()">Login here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Kemaskini path JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
